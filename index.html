@@ -1,201 +1,723 @@
-<!-- Go to this github repo  https://github.com/ashiksanyo10/Port_Temp.git and clone it to your local machine -->
-<!-- Open the local copy of code and edit the templete -->
-
-
-<!-- Dont alter any tags, fill in you information on required field only and dont alter style.css and javascript file-->
-<!-- once editing the templete, Create a github repo and push the code-->
-<!-- you can host the website on gitpages or netlify  -->
-<!---->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
+    <meta
+      name="description"
+      content="Amal Krishna - computer science graduate from Bangalore. Full-stack projects, data and machine learning work, certifications and experience."
+    />
+    <meta name="theme-color" content="#0b0f14" />
+    <title>Amal Krishna &middot; Developer Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Amal Krishna</title>    <!-- Change it your name  --> .
   </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="https://www.linkedin.com/in/amal-krishna-17611017b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoGGGwkW6R2yKf8aIpNsz%2BQ%3D%3D" class="link"  
-          >{AK}. <!--insert your initials here --></a
-        >
-      </h3> <!--use the linkedIn or any link in above href-->
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#Exp">Experience</a>
-          </li>
+  <body class="dark">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- scroll progress -->
+    <div class="progress" aria-hidden="true">
+      <span class="progress__bar" id="progressBar"></span>
+    </div>
+
+    <!-- animated background -->
+    <canvas class="bg-canvas" id="bgCanvas" aria-hidden="true"></canvas>
+
+    <header class="header" id="header">
+      <a class="logo" href="#home">
+        <span class="logo__prompt">~/</span>amal-krishna<span
+          class="logo__caret"
+          aria-hidden="true"
+        ></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="#about">about</a></li>
+          <li><a class="nav__link" href="#skills">skills</a></li>
+          <li><a class="nav__link" href="#projects">projects</a></li>
+          <li><a class="nav__link" href="#certifications">certs</a></li>
+          <li><a class="nav__link" href="#volunteering">volunteering</a></li>
+          <li><a class="nav__link" href="#contact">contact</a></li>
         </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        <button
+          class="icon-btn icon-btn--text"
+          type="button"
+          id="themeToggle"
+          aria-label="Toggle dark and light theme"
+        >
+          <span id="themeLabel">dark</span>
         </button>
 
         <button
+          class="icon-btn nav__hamburger"
           type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navList"
         >
-          <i aria-hidden="true" class="fas fa-bars"></i>
+          <span class="bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
         </button>
       </nav>
     </header>
 
-    <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Amal Krishna</span></h1>
-        <h2 class="about__role">Aspiring Developer and Graphics Designer</h2>
-        <p class="about__desc"> <!-- Edit the About make sure you add your degree!-->
-          Tech enthusiast from Bangalore. Passionate about solving problems and building innovative solutions. Currently pursuing BCA at Christ University.
-        </p> <!-- about you -->
-        <br>
-        <a href="mailto:amalkrishnauk2004@gmail.com">Mail: amalkrishnauk2004@gmail.com </a><p> Contact: +91 81292 23368</p>  <!--Change it to your mail id and contact no-->
-      </br>
-      
+    <main id="main">
+      <!-- ==================== hero ==================== -->
+      <section class="hero" id="home">
+        <div class="window window--hero reveal">
+          <div class="window__bar">
+            <span class="window__dots">
+              <i class="dot dot--red"></i>
+              <i class="dot dot--amber"></i>
+              <i class="dot dot--green"></i>
+            </span>
+            <span class="window__title">amal@portfolio: ~</span>
+          </div>
 
-        <div class="about__contact center">
-          <a href="https://drive.google.com/file/d/1sqFA-cyc5a9JV0TEPUQ9w8cGY47FmJc_/view?usp=drive_link" target="_blank"  > <!-- drive link for resume-->
-            <span class="btn btn--outline">Resume</span> 
-          </a>
+          <div class="window__body">
+            <p class="term-line"><span class="prompt">$</span> whoami</p>
+            <h1 class="hero__name">Amal Krishna</h1>
 
-          <a
-            href="https://github.com/Vic204" target="_blank"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a> <!-- Github profile Link-->
+            <p class="term-line">
+              <span class="prompt">$</span> cat role.txt
+              <span class="typed" id="typed"></span
+              ><span class="caret" aria-hidden="true"></span>
+            </p>
 
-          <a
-            href="https://www.linkedin.com/in/amal-krishna-17611017b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoGGGwkW6R2yKf8aIpNsz%2BQ%3D%3D" target="_blank"  
-            aria-label="linkedin"
-            class="link link--icon"
-          > 
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a> <!-- LinledIn profile Link-->
+            <p class="term-line term-line--dim">
+              <span class="prompt">$</span> location --city Bangalore --country
+              India
+            </p>
+            <p class="term-line term-line--dim">
+              <span class="prompt">$</span> education --degree BCA --university
+              "Christ University" --year 2025
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="resume.pdf"
+                target="_blank"
+                rel="noopener"
+                >resume.pdf</a
+              >
+              <a class="btn btn--ghost" href="#projects">cd ./projects</a>
+            </div>
+
+            <!-- counts are calculated from the real content further down the page -->
+            <ul class="stats">
+              <li class="stat">
+                <span class="stat__num" data-count-from="#skills .skill">0</span>
+                <span class="stat__label">skills</span>
+              </li>
+              <li class="stat">
+                <span class="stat__num" data-count-from=".projects__grid .project"
+                  >0</span
+                >
+                <span class="stat__label">projects</span>
+              </li>
+              <li class="stat">
+                <span class="stat__num" data-count-from="#certGrid .cert">0</span>
+                <span class="stat__label">certifications</span>
+              </li>
+              <li class="stat">
+                <span class="stat__num" data-count-from=".timeline__item">0</span>
+                <span class="stat__label">roles held</span>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+      <!-- ==================== about ==================== -->
+      <section class="section" id="about">
+        <h2 class="section__title"><span class="section__sigil">#</span> about</h2>
+
+        <div class="window reveal">
+          <div class="window__bar">
+            <span class="window__dots">
+              <i class="dot dot--red"></i>
+              <i class="dot dot--amber"></i>
+              <i class="dot dot--green"></i>
+            </span>
+            <span class="window__title">about.md</span>
+          </div>
+
+          <div class="window__body">
+            <p class="about__text">
+              Computer science graduate from Bangalore who learns new tools
+              quickly and likes seeing things through from idea to working
+              product. I've built full-stack apps, trained a model that compares
+              two approaches to therapy, and I care about interfaces that feel
+              obvious the first time you use them. Looking for work where I can
+              keep turning ideas into something people actually use.
+            </p>
+
+            <ul class="about__facts">
+              <li><span class="key">name</span> Amal Krishna</li>
+              <li><span class="key">role</span> Developer &amp; Graphics Designer</li>
+              <li><span class="key">location</span> Bangalore, India</li>
+              <li>
+                <span class="key">education</span> BCA, Christ University
+                (2022&ndash;2025)
+              </li>
+              <li>
+                <span class="key">languages</span> English, Malayalam, Hindi,
+                German (elementary)
+              </li>
+              <li>
+                <span class="key">toolbox</span> JavaScript, Python, React, SQL,
+                Figma
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== skills ==================== -->
+      <section class="section" id="skills">
+        <h2 class="section__title"><span class="section__sigil">#</span> skills</h2>
+        <!-- data-level below is 0-100 - adjust to match how confident you actually feel -->
+        <p class="section__hint">
+          <span class="prompt">$</span> cat skills.txt
+          <span class="comment">// edit data-level to change the bars</span>
+        </p>
+
+        <div class="skills__grid">
+          <div class="window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">web</span>
+            </div>
+            <div class="window__body">
+              <ul class="skills__list">
+                <li class="skill" data-level="85">
+                  <div class="skill__row">
+                    <span class="skill__name">HTML</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="80">
+                  <div class="skill__row">
+                    <span class="skill__name">CSS</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="75">
+                  <div class="skill__row">
+                    <span class="skill__name">JavaScript</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">languages</span>
+            </div>
+            <div class="window__body">
+              <ul class="skills__list">
+                <li class="skill" data-level="80">
+                  <div class="skill__row">
+                    <span class="skill__name">Python</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="70">
+                  <div class="skill__row">
+                    <span class="skill__name">Java</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="65">
+                  <div class="skill__row">
+                    <span class="skill__name">C</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">data &amp; ml</span>
+            </div>
+            <div class="window__body">
+              <ul class="skills__list">
+                <li class="skill" data-level="80">
+                  <div class="skill__row">
+                    <span class="skill__name">Pandas</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="75">
+                  <div class="skill__row">
+                    <span class="skill__name">MySQL</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="70">
+                  <div class="skill__row">
+                    <span class="skill__name">PostgreSQL</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="65">
+                  <div class="skill__row">
+                    <span class="skill__name">Machine Learning</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">design &amp; tools</span>
+            </div>
+            <div class="window__body">
+              <ul class="skills__list">
+                <li class="skill" data-level="80">
+                  <div class="skill__row">
+                    <span class="skill__name">Adobe Photoshop</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="75">
+                  <div class="skill__row">
+                    <span class="skill__name">Figma</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="85">
+                  <div class="skill__row">
+                    <span class="skill__name">Microsoft Office</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+                <li class="skill" data-level="60">
+                  <div class="skill__row">
+                    <span class="skill__name">Autodesk 3ds Max</span>
+                    <span class="skill__pct">0%</span>
+                  </div>
+                  <div class="skill__track"><span class="skill__fill"></span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="chips reveal">
+          <span class="chips__label">also good at:</span>
+          <ul class="chips__list">
+            <li>Project Management</li>
+            <li>Research</li>
+            <li>Literature Survey</li>
+            <li>Data Cleaning</li>
+            <li>Reporting</li>
+            <li>Team Collaboration</li>
+            <li>Process Coordination</li>
+            <li>Communication</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================== projects ==================== -->
+      <section class="section" id="projects">
+        <h2 class="section__title"><span class="section__sigil">#</span> projects</h2>
+        <p class="section__hint">
+          <span class="prompt">$</span> ls ./projects
+          <span class="comment">// copy a whole &lt;article&gt; block to add one</span>
+        </p>
 
         <div class="projects__grid">
-          <div class="project">
-            <h3>BuildIT</h3> <!--Peoject Title -->
-            <p class="project__description">
-              A dynamic website used to allow users to purchase their custom PC builds
-            </p> <!--Project description-->
-            <ul class="project__stack">
-              <li class="project__stack-item">JavaScript</li>
-              <li class="project__stack-item">Html</li>
-              <li class="project__stack-item">CSS</li>
-            </ul>
+          <article class="project window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">Efficacy Finder / README.md</span>
+              <span class="window__date">Nov 2024 &ndash; Mar 2025</span>
+            </div>
+            <div class="window__body">
+              <h3 class="project__title">Efficacy Finder</h3>
+              <p class="project__desc">
+                A machine-learning study comparing Virtual Reality Exposure
+                Therapy with CBT for individual patients. After reviewing 32
+                research papers I built a Random Forest model on real and
+                synthetic patient data to predict which treatment is more likely
+                to succeed, optimising for interpretability rather than a
+                black-box model.
+              </p>
+              <ul class="project__stack">
+                <li>Python</li>
+                <li>scikit-learn</li>
+                <li>Pandas</li>
+                <li>Machine Learning</li>
+              </ul>
+            </div>
+          </article>
 
-            <a
-              href="https://github.com/Vic204/BuildIT" target="_blank"
-              aria-label="source code"
-              class="link link--icon"
-            >  <!--Project link-->
+          <article class="project window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">DataScope / README.md</span>
+              <span class="window__date">Jul 2024 &ndash; Nov 2024</span>
+            </div>
+            <div class="window__body">
+              <h3 class="project__title">DataScope</h3>
+              <p class="project__desc">
+                A survey app built end to end: a React Native interface, a
+                Node/Express back end, Firebase for authentication and real-time
+                sync, and MongoDB for storing survey data.
+              </p>
+              <ul class="project__stack">
+                <li>React Native</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Firebase</li>
+                <li>MongoDB</li>
+              </ul>
+              <div class="project__links">
+                <a
+                  class="project__link"
+                  href="https://github.com/Vic204/DataScope"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  source code <span aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
 
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            
-            
-            
-            
-          </div>
+          <article class="project window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">BuildIT / README.md</span>
+              <span class="window__date">Jan 2024 &ndash; Apr 2024</span>
+            </div>
+            <div class="window__body">
+              <h3 class="project__title">BuildIT</h3>
+              <p class="project__desc">
+                An online platform for designing and pricing custom PC builds.
+                Users pick parts and watch the price update in real time, backed
+                by a Node/Express API and a PostgreSQL component catalogue.
+              </p>
+              <ul class="project__stack">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Figma</li>
+              </ul>
+              <div class="project__links">
+                <a
+                  class="project__link"
+                  href="https://github.com/Vic204/BuildIT"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  source code <span aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">employee-management / README.md</span>
+              <span class="window__date">Oct 2021 &ndash; Feb 2022</span>
+            </div>
+            <div class="window__body">
+              <h3 class="project__title">Employee Management System</h3>
+              <p class="project__desc">
+                A Python tool for managing employee records. Pandas imports data
+                from CSV and Excel, cleans missing values and duplicates, then
+                answers HR questions &mdash; adding staff, updating records and
+                calculating years of service.
+              </p>
+              <ul class="project__stack">
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Excel</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 
-    <section id="Experience" class="section experience"> 
-        <h2 class="section__title">Volunteering Experience</h2>
-      <div class="experience__grid">
-          <div class="experience">
-            <h3>DPE (Department of Physical Education): Logistics team </h3> <!--Peoject Title -->
-            <p class="experience__description">
-              <ul>
-              <li>•	Led logistics for 3 intra-college sports events in the PEDAGOGIC LEAGUE series. </li> 
-              <li>•	Coordinated, equipment, schedules, and transportation for each event.</li>
-              <li>•	Served in the logistics team for the CUBYC-SPO 23 inter-college sports festival.</li>
-              <li>•	Managed logistics for multiple sports, including venue coordination, transportation, and accommodation for visiting teams.</li>
-              <li>•	Recruited, trained, and supervised volunteers, ensuring smooth event operation.</li>
-            </ul>
-          </div>
-       <div class="experience">
-         <h3>Ataraxia (Esports Club): Student Representative </h3> <!--Peoject Title -->
-         <p class="experience__description">
-           <ul>
-           <li>Led successful intra-college esports tournament: Organized "SyncX" attracting numerous participants and spectators. </li> 
-           <li>Represented college in inter-college events: Led and participated in teams, achieving notable placements and boosting the college's reputation.</li>
-           <li>Grew and strengthened the esports club: Recruited new members, organized meetings.</li>
-           <li>Developed leadership and esports skills: Demonstrated leadership, communication, event management, and competitive gaming abilities.</li>
-          
-         </ul>
-       </div>
-     </div>
-     </section>
+      <!-- ==================== certifications ==================== -->
+      <section class="section" id="certifications">
+        <h2 class="section__title">
+          <span class="section__sigil">#</span> certifications
+        </h2>
+        <p class="section__hint">
+          <span class="prompt">$</span> ls ./certifications
+          <span class="comment">// add yours in certifications.js</span>
+        </p>
 
- <!-- duplicate the above section and you can change it to paper or experience-->
-
-      
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>                        <!--You can fill in the elective course and you can remove extras-->
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">MySQL</li>
-          <li class="skills__list-item btn btn--plain">Python</li>
-          <li class="skills__list-item btn btn--plain">Java</li>
-          <li class="skills__list-item btn btn--plain">Microsoft Office</li>
-          <li class="skills__list-item btn btn--plain">Autodesk 3ds Max</li>
-          <li class="skills__list-item btn btn--plain">Adobe Photoshop</li>
-          <li class="skills__list-item btn btn--plain">Postgre SQL</li>
-        </ul>
+        <!-- cards are rendered from the CERTIFICATIONS array in certifications.js -->
+        <div class="certs__grid" id="certGrid"></div>
       </section>
 
+      <!-- ==================== volunteering ==================== -->
+      <section class="section" id="volunteering">
+        <h2 class="section__title">
+          <span class="section__sigil">#</span> volunteering experience
+        </h2>
+        <p class="section__hint">
+          <span class="prompt">$</span> git log --oneline ./volunteering
+        </p>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <div class="timeline__head">
+              <h3 class="timeline__role">Logistics Team</h3>
+              <span class="timeline__org"
+                >DPE &middot; Department of Physical Education</span
+              >
+              <span class="timeline__date">Dec 2023 &ndash; Feb 2024</span>
+            </div>
+            <ul class="timeline__points">
+              <li>
+                Led logistics for three intra-college sports events in the
+                PEDAGOGIC LEAGUE series.
+              </li>
+              <li>
+                Coordinated equipment, schedules and transportation for every
+                event.
+              </li>
+              <li>
+                Worked logistics for CUBYC-SPO 23, the inter-college sports
+                festival.
+              </li>
+              <li>
+                Handled venue coordination, transport and accommodation for
+                visiting teams across multiple sports.
+              </li>
+              <li>
+                Recruited, trained and supervised volunteers to keep events
+                running smoothly.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <div class="timeline__head">
+              <h3 class="timeline__role">Student Representative</h3>
+              <span class="timeline__org">Ataraxia &middot; Esports Club</span>
+              <span class="timeline__date">Dec 2023 &ndash; Feb 2024</span>
+            </div>
+            <ul class="timeline__points">
+              <li>
+                Organised "SyncX", an intra-college esports tournament that
+                drew a strong field of participants and spectators.
+              </li>
+              <li>
+                Represented the college in inter-college events, leading and
+                playing in teams that placed well.
+              </li>
+              <li>
+                Grew the club by recruiting new members and running regular
+                meetings.
+              </li>
+              <li>
+                Built up leadership, communication and event-management skills
+                along the way.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== education ==================== -->
+      <section class="section" id="education">
+        <h2 class="section__title">
+          <span class="section__sigil">#</span> education
+        </h2>
+        <p class="section__hint"><span class="prompt">$</span> cat education.log</p>
+
+        <div class="edu__grid">
+          <article class="edu window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">christ-university</span>
+              <span class="window__date">2022 &ndash; 2025</span>
+            </div>
+            <div class="window__body">
+              <h3 class="edu__title">Bachelor of Computer Applications</h3>
+              <p class="edu__meta">Christ University, Yeshwantpur &middot; Bengaluru</p>
+              <p class="edu__note">SGPA 3.21 / 4 &middot; 8.2 / 10</p>
+            </div>
+          </article>
+
+          <article class="edu window reveal">
+            <div class="window__bar">
+              <span class="window__dots">
+                <i class="dot dot--red"></i>
+                <i class="dot dot--amber"></i>
+                <i class="dot dot--green"></i>
+              </span>
+              <span class="window__title">school</span>
+              <span class="window__date">&ndash; 2022</span>
+            </div>
+            <div class="window__body">
+              <h3 class="edu__title">Class X &amp; XII</h3>
+              <p class="edu__meta">
+                Kulapati Munshi Bhavans Vidya Mandir &middot; Thrissur, Kerala
+              </p>
+              <p class="edu__note">X &mdash; 89.4% &middot; XII &mdash; 82.4%</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== contact ==================== -->
+      <section class="section" id="contact">
+        <h2 class="section__title"><span class="section__sigil">#</span> contact</h2>
+
+        <div class="window reveal">
+          <div class="window__bar">
+            <span class="window__dots">
+              <i class="dot dot--red"></i>
+              <i class="dot dot--amber"></i>
+              <i class="dot dot--green"></i>
+            </span>
+            <span class="window__title">contact.sh</span>
+          </div>
+
+          <div class="window__body">
+            <p class="term-line">
+              <span class="prompt">$</span> echo "let's build something"
+            </p>
+
+            <div class="contact__grid">
+              <a class="contact__card" href="mailto:amalkrishnauk2004@gmail.com">
+                <span class="contact__label">email</span>
+                <span class="contact__value">amalkrishnauk2004@gmail.com</span>
+              </a>
+
+              <a class="contact__card" href="tel:+918129223368">
+                <span class="contact__label">phone</span>
+                <span class="contact__value">+91 81292 23368</span>
+              </a>
+
+              <a
+                class="contact__card"
+                href="https://github.com/Vic204"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact__label">github</span>
+                <span class="contact__value">github.com/Vic204</span>
+              </a>
+
+              <a
+                class="contact__card"
+                href="https://www.linkedin.com/in/amal-krishna-17611017b"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="contact__label">linkedin</span>
+                <span class="contact__value">amal-krishna</span>
+              </a>
+            </div>
+
+            <p class="term-line term-line--dim">
+              <span class="prompt">$</span> <span class="caret" aria-hidden="true"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
-      <a
-        href="" 
-        class="link footer__link"
-      >  
-        Created By Amal Krishna! <!-- edit it to your name -->
-      </a>
+      <p class="footer__text">
+        <span class="prompt">$</span> exit
+        <span class="comment">// &copy; <span id="year">2026</span> Amal Krishna</span>
+      </p>
     </footer>
 
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
-    </div>
-    </div>
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">
+      <span aria-hidden="true">&uarr;</span>
+    </button>
 
-    <script src="./script.js"></script>
+    <noscript>
+      <p class="noscript">
+        Some animations and the certifications list need JavaScript enabled.
+      </p>
+    </noscript>
+
+    <script src="certifications.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
